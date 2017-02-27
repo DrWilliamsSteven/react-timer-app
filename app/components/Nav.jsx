@@ -22,13 +22,13 @@ var Nav_inst = React.createClass({
                         <IndexLinkContainer to="/">
                             <NavItem eventKey={1}>Timer</NavItem>
                         </IndexLinkContainer>
-                        <LinkContainer to="/about">
+                        <LinkContainer to="/countdown">
                             <NavItem eventKey={2}>Countdown</NavItem>
                         </LinkContainer>
                     </Nav>
                     
                     <Nav pullRight >
-                        <NavItem>Created by <a href="https://github.com/DrWilliamsSteven">Steven Williams</a></NavItem>
+                        <NavItem>Created by <a href="https://github.com/DrWilliamsSteven" target="_blank">Steven Williams</a></NavItem>
                     </Nav>
                     
                 </Navbar.Collapse>

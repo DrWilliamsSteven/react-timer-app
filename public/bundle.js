@@ -20454,7 +20454,12 @@ var Main = __webpack_require__(240);
 ReactDOM.render(React.createElement(
     Router,
     { history: hashHistory },
-    React.createElement(Route, { path: "/", component: Main })
+    React.createElement(
+        Route,
+        { path: "/", component: Main },
+        React.createElement(IndexRoute, { component: Timer }),
+        React.createElement(Route, { path: "countdown", component: Countdown })
+    )
 ), document.getElementById('app'));
 
 /***/ }),
@@ -20566,7 +20571,7 @@ var Nav_inst = React.createClass({
                     ),
                     React.createElement(
                         _reactRouterBootstrap.LinkContainer,
-                        { to: "/about" },
+                        { to: "/countdown" },
                         React.createElement(
                             NavItem,
                             { eventKey: 2 },
@@ -20583,7 +20588,7 @@ var Nav_inst = React.createClass({
                         "Created by ",
                         React.createElement(
                             "a",
-                            { href: "https://github.com/DrWilliamsSteven" },
+                            { href: "https://github.com/DrWilliamsSteven", target: "_blank" },
                             "Steven Williams"
                         )
                     )
