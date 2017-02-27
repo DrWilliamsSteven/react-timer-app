@@ -2,6 +2,8 @@ var React = require("react")
 var Nav = require("Nav")
 var { Grid, Row, Col } = require('react-bootstrap');
 
+
+
 var Main = (props) => {
     return (
         <div>

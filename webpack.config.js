@@ -4,21 +4,22 @@ var path = require('path');
 
 module.exports = {
     entry: [
-        'script-loader!jquery/dist/jquery.min.js',
         './app/app.jsx'
     ],
-    externals: {
-        jquery: 'jQuery'
-    },
+
     output: {
         path: __dirname,
         filename: './public/bundle.js'
     },
     resolve: {
-        modules: ["app/components", "app/api", "node_modules"],
+        modules: ["app/components", "app/api", "app/styles", "node_modules"],
         alias: {
             Main: "Main.jsx",
-            Nav: "Nav.jsx"
+            Nav: "Nav.jsx",
+            Timer: 'Timer.jsx',
+            Countdown: 'Countdown.jsx',
+            Clock: 'Clock.jsx',
+            applicationStyles: 'app.scss',
 
         },
         extensions: ['.js', '.jsx']
@@ -59,7 +60,11 @@ module.exports = {
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url?limit=10000&mimetype=image/svg+xml'
-            }
+            },
+            {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
         ]
     },
     plugins: [
@@ -69,7 +74,9 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             '$': 'jquery',
-            'jQuery': 'jquery'
+            'jquery': 'jquery',
+            "jQuery": "jquery"
+
         })
     ],
     node: {

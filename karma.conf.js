@@ -18,6 +18,6 @@ module.exports = function(config) {
             noInfo: true
         },
         hostname: process.env.IP,
-        port: process.env.PORT
+        port: process.env.TESTPORT
     });
 };

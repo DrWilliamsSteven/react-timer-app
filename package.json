@@ -5,6 +5,8 @@
   "main": "server.js",
   "author": "Steven Williams",
   "scripts": {
+    "build-css": "node-sass app/styles/ -o app/styles/",
+    "watch-css": "npm run build-css && node-sass app/styles/ -o app/styles/ --watch",
     "test": "karma start --no-browsers",
     "start": "node server.js"
   },
@@ -37,7 +39,10 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
+    "node-sass": "^4.5.0",
+    "react-addons-test-utils": "^15.4.2",
     "react-bootstrap": "^0.30.7",
+    "sass-loader": "^6.0.2",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
