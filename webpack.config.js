@@ -6,7 +6,11 @@ module.exports = {
     entry: [
         './app/app.jsx'
     ],
-
+    externals: {
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+    },
     output: {
         path: __dirname,
         filename: './public/bundle.js'
@@ -18,6 +22,7 @@ module.exports = {
             Nav: "Nav.jsx",
             Timer: 'Timer.jsx',
             Countdown: 'Countdown.jsx',
+            CountdownForm: 'CountdownForm.jsx',
             Clock: 'Clock.jsx',
             applicationStyles: 'app.scss',
 
