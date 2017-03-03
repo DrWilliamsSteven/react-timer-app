@@ -25,6 +25,32 @@ describe('Countdown', () => {
                 done();
             }, 1001)
         });
+
+        it('should pause countdown on pause status', (done) => {
+            const wrapper = TestUtils.renderIntoDocument(<Countdown/>);
+            wrapper.handleSetCountdown(3);
+            wrapper.handleStatusChange('paused');
+
+            setTimeout(() => {
+                expect(wrapper.state.count).toBe(3);
+                expect(wrapper.state.countdownStatus).toBe('paused');
+                done();
+            }, 1001)
+        });
+
+        it('should reset countdown on stopped status', (done) => {
+            const wrapper = TestUtils.renderIntoDocument(<Countdown/>);
+            wrapper.handleSetCountdown(3);
+            wrapper.handleStatusChange('stopped');
+
+            setTimeout(() => {
+                expect(wrapper.state.count).toBe(0);
+                expect(wrapper.state.countdownStatus).toBe('stopped');
+                done();
+            }, 1001)
+        });
+
+
     });
 
     describe('setTimer', () => {
@@ -39,4 +65,8 @@ describe('Countdown', () => {
 
         });
     });
+
+
+
+
 });
