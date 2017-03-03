@@ -1,0 +1,10 @@
+.controls {
+    display: flex;
+    justify-content: center;
+    Button {
+        padding: 0.75rem 3rem;
+    }
+    Button:first-child {
+        margin-right: 1.5rem;
+    }
+}
