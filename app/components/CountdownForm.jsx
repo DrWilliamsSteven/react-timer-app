@@ -16,12 +16,12 @@ var CountdownForm = React.createClass({
     render: function() {
         return (
 
-            <form ref='form' onSubmit = { this.onFormSubmit }>
-                    <FormGroup controlId="formBasicText" >
-                        <FormControl type="text" placeholder="Enter time in seconds" ref="seconds" />
-                    </FormGroup>
-                    <Button type='submit' bsStyle="primary" bsSize="large" block>Start!</Button>
-                </form>
+            <form ref='form' onSubmit={this.onFormSubmit}>
+                <FormGroup controlId="formBasicText" >
+                    <FormControl type="text" placeholder="Enter time in seconds" ref="seconds" />
+                </FormGroup>
+                <Button type='submit' bsStyle="primary" bsSize="large" block>Start!</Button>
+            </form>
 
         );
     }

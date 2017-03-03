@@ -7,13 +7,13 @@ import { shallow, mount } from 'enzyme';
 //import sinon from 'sinon';
 
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
-var CountdownForm = require("CountdownForm")
+var CountdownForm = require("CountdownForm");
 
 describe('CountdownForm', () => {
     it('should exist', () => {
-            expect('CountdownForm').toExist();
-        })
-        /*
+        expect('CountdownForm').toExist();
+    });
+    /*
             it('should call onSetCountdown if valid seconds entered', () => {
                 var spy = expect.createSpy();
                 var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
@@ -59,4 +59,4 @@ describe('CountdownForm', () => {
              expect(spy.calledWith(item, false)).to.be.true;
          });
      */
-})
+});
